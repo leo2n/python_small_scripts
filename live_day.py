@@ -97,6 +97,17 @@ def day_count3():
         count3 += TODAY_DAY
     return count3
 
+def gap():
+    """
+    Calculate gap between BORN and TODAY
+    gap_days: datetime.timedelta
+    gap_date: datetime.date
+    """
+    gap_days = date.today() - date(BORN_YEAR, BORN_MONTH, BORN_DAY)
+    gap_days = date(1, 1, 1) + gap_days
+    gap_date = date(gap_days.year-1, gap_days.month-1, gap_days.day-1)
+    return gap_date
+
 def main():
     """
     Calculate and display the result
@@ -104,7 +115,8 @@ def main():
     allday = day_count1() + day_count2() + day_count3()
     print("Hello, Calculating your living day, wait for a second : )")
     print("You have lived for {} days".format(allday))
-    print("You have ")
+    print("You have lived for {} years, {} months,\
+{} days".format(gap().year, gap().month, gap().day))
 
 if __name__ == "__main__":
     main()
