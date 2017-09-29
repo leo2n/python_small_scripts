@@ -102,6 +102,7 @@ def gap():
     Calculate gap between BORN and TODAY
     gap_days: datetime.timedelta
     gap_date: datetime.date
+    gap based on date(1,1,1)
     """
     gap_days = date.today() - date(BORN_YEAR, BORN_MONTH, BORN_DAY)
     gap_days = date(1, 1, 1) + gap_days
