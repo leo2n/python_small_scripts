@@ -11,7 +11,7 @@ NOW = date.today()
 TODAY_YEAR = NOW.year
 TODAY_MONTH = NOW.month
 TODAY_DAY = NOW.day
-NOW_LIST = [TODAY_YEAR, TODAY_MONTH, TODAY_DAY]
+TODAY_LIST = [TODAY_YEAR, TODAY_MONTH, TODAY_DAY]
 
 # get BORN year, month, day
 BORN_YEAR, BORN_MONTH, BORN_DAY = input("Please input\
@@ -20,6 +20,19 @@ BORN_YEAR = int(BORN_YEAR)
 BORN_MONTH = int(BORN_MONTH)
 BORN_DAY = int(BORN_DAY)
 BORN_LIST = [BORN_YEAR, BORN_MONTH, BORN_DAY]
+
+def gap():
+    """
+    get gap between TODAY and BORN
+    """
+    gap_list = []
+    if is_input_vaild(BORN_LIST, TODAY_LIST) is True:
+        if TODAY_LIST[2] > BORN_LIST[2]:
+            gap_day = TODAY_LIST[2] - BORN_LIST[2]
+        elif TODAY_LIST[2] = BORN_LIST[2]:
+            gap_day = 0
+        elif TODAY_LIST[2] < BORN_LIST[2]:
+            
 
 RENNIAN = [0, 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
 NOT_RENNIAN = [0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
@@ -104,6 +117,7 @@ def main():
     allday = day_count1() + day_count2() + day_count3()
     print("Hello, Calculating your living day, wait for a second : )")
     print("You have lived for {} days".format(allday))
+    print("You have ")
 
 if __name__ == "__main__":
     main()
