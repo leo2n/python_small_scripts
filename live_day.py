@@ -114,10 +114,13 @@ def main():
     Calculate and display the result
     """
     allday = day_count1() + day_count2() + day_count3()
+    expect_live_years = int(input("How long do you expect you can live?"))
+    expect_live_days = expect_live_years*365.25
     print("Hello, Calculating your living day, wait for a second : )")
     print("You have lived for {} days".format(allday))
-    print("You have lived for {} years, {} months,\
-{} days".format(gap().year, gap().month, gap().day))
+    print("You have lived for {} years, {} months,{} \
+days".format(gap().year, gap().month, gap().day))
+    print("You have spend {:.2%} in your life!".format((allday/expect_live_days)))
 
 if __name__ == "__main__":
     main()
