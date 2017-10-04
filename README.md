@@ -3,3 +3,6 @@
 * live_day.py
 
     calculate how long you live
+* is_triangle.py
+
+    judge is a triangle
