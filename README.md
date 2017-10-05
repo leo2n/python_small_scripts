@@ -6,3 +6,6 @@
 * is_triangle.py
 
     judge is a triangle
+* countgame.py
+
+    sorted by count times
