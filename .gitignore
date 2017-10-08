@@ -1,3 +1,4 @@
 # vscode setting directory
 .vscode/
 *.pyc
+play.py
