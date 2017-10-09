@@ -11,5 +11,3 @@ def ping(host):
     parameters = "-n 1" if platform.system().lower() == "windows" else "-c 1"
 
     return os.system("ping " + parameters +" " +host) == 0
-
-ping("127.0.0.1")
