@@ -4,6 +4,7 @@ ping server using Python
 import platform
 import os 
 
+
 def ping(host):
     """
     Return True if host: str  responds to a ping request 
