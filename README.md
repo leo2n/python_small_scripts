@@ -9,6 +9,3 @@
 * countgame.py
 
     sorted by count times
-* countgame.py
-
-    count times in a range and list it.
