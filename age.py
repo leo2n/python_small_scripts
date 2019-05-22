@@ -8,11 +8,11 @@ import time
 import math
 
 
-logging.basicConfig(
-    filename="log",
-    level=logging.INFO,
-    format="%(asctime)s:%(levelname)s:%(message)s"
-)
+# logging.basicConfig(
+#     filename="log",
+#     level=logging.INFO,
+#     format="%(asctime)s:%(levelname)s:%(message)s"
+# )
 
 class DateCal:
     """
@@ -76,13 +76,6 @@ class DateCal:
         progress = str(((subsSeconds/expectSeconds)*100).__round__(2))+"%"
         print("你期望生活{}年, 已经度过{}".format(self.expectYear, progress))
 
-
-
-
-            
-            
-
 if __name__ == "__main__":
     d = DateCal()
     d.cal()
-
