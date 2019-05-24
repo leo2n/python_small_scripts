@@ -41,10 +41,13 @@ class ScaleConvert:
 if __name__ == "__main__":
     try:
         while True:
-            x = input("请输入要转换的数字:")
-            s = ScaleConvert(x)
-            if x == "break":
-                break
-            s.convert()
+                x = input("请输入要转换的数字:")
+                s = ScaleConvert(x)
+                if x == "break":
+                    break
+                try:
+                    s.convert()
+                except:
+                    print("数据格式不对, 请重试!")
     except:
         print("意外情况发生, 程序退出!")
